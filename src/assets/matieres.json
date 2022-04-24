@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Base de données",
+    "image": "../assets/images/logoBDD.png",
+    "imageProf": "../assets/images/bdd.jpg"
+  },
+  {
+    "name": "Technologies Web",
+    "image": "../assets/images/logoTechWeb.png",
+    "imageProf": "../assets/images/techWeb.png"
+  },
+  {
+    "name": "Grails",
+    "image": "../assets/images/logoGrails.png",
+    "imageProf": "../assets/images/grails.png"
+  }
+]

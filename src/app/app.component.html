@@ -1,0 +1,11 @@
+<app-sidenav #sidenav>
+  <app-header (sideNavToggle)='sidenav.toggleSidenav()'></app-header>
+  <main>
+      <!--
+      <button mat-button color="primary" (click)="genererDonneesDeTest()">Peupler BD avec données de test</button>
+      -->
+
+    <router-outlet></router-outlet>
+  </main>
+</app-sidenav>
+

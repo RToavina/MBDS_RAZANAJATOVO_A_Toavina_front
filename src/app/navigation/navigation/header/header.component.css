@@ -1,0 +1,17 @@
+.title {
+  text-decoration: none;
+  color: white;
+}
+
+
+.container {
+  display:flex;
+  flex-direction: row;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: auto;
+}

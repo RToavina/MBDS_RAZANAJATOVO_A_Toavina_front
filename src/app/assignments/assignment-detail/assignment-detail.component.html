@@ -1,0 +1,24 @@
+<mat-card *ngIf="assignmentTransmis">
+  <mat-card-header>
+    <div *ngIf="matiere?.image" mat-card-avatar>
+      <img mat-card-avatar src="{{matiere?.image}}">
+    </div>
+    <mat-card-title>{{assignmentTransmis.nom}}</mat-card-title>
+    <div *ngIf="matiere?.imageProf">
+      <img mat-card-avatar src="{{matiere?.imageProf}}">
+    </div>
+  </mat-card-header>
+  <mat-card-subtitle>{{assignmentTransmis.dateDeRendu | date:"dd/MM/yy"}}</mat-card-subtitle>
+  <mat-card-subtitle *ngIf="assignmentTransmis.auteur">AUTEUR : {{assignmentTransmis.auteur}}</mat-card-subtitle>
+
+  <mat-card-content>
+    <p *ngIf="assignmentTransmis?.matiere"> MATIERE : {{matiere?.name}}</p>
+    <p *ngIf="assignmentTransmis.rendu && assignmentTransmis.note"> NOTE : {{assignmentTransmis.note}}</p>
+    <p *ngIf="assignmentTransmis.remarque"> REMARQUE : {{assignmentTransmis.remarque}} </p>
+  </mat-card-content>
+  <div id="bottom">
+    <mat-checkbox *ngIf="!assignmentTransmis.rendu" (click)="onAssignmentRendu()">Rendu</mat-checkbox>
+    <button mat-stroked-button color="primary" (click)="onClickEdit()" [disabled]="!isLoggedIn()">EDIT</button>
+    <button mat-raised-button color="warn" (click)="onDelete()" [disabled]="!isLoggedIn()">DELETE</button>
+  </div>
+</mat-card>

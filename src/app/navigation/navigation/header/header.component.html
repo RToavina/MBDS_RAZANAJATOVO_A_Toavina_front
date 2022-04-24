@@ -1,0 +1,12 @@
+<mat-toolbar color='primary' class="container">
+    <button mat-icon-button (click)='onToggleSidenav()'>
+      <mat-icon> menu</mat-icon>
+    </button>
+  <a class='title' routerLink='/'>{{titre}}</a>
+  <div *ngIf="user" class="user">
+    <mat-icon *ngIf="!user?.isAdmin">account_circle</mat-icon>
+    <mat-icon *ngIf="user?.isAdmin">admin_panel_settings</mat-icon>
+    <span>{{user?.name}}</span>
+  </div>
+</mat-toolbar>
+

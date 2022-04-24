@@ -1,0 +1,32 @@
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field >
+    <mat-label>Name</mat-label>
+    <input matInput formControlName='name'>
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName='email'>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" formControlName='password'>
+    <mat-error *ngIf="passwordFormControl.hasError('required')">
+      Password is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-slide-toggle formControlName='isAdmin'>Admin</mat-slide-toggle>
+  <div class="buttons">
+    <button mat-raised-button type="submit" >Creer</button>
+  </div>
+</form>

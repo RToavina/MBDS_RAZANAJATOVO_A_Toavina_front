@@ -1,0 +1,43 @@
+<form ngForm #assignmentForm (submit)="onSubmit(); assignmentForm.reset()" class="form">
+  <h1>Ajout d'un assignment</h1>
+  <mat-form-field>
+    <input matInput placeholder="Nom de l'assignment" [(ngModel)]="nomAssignment" name="nom" required>
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="dateDeRendu" name="date" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Auteur" [(ngModel)]="auteur" name="auteur">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Matieres</mat-label>
+    <mat-select [(ngModel)]="matiere" name="matiere">
+      <mat-option *ngFor="let m of matieres" [value]="m">
+        {{m.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Note</mat-label>
+    <input matInput placeholder="Note" [(ngModel)]="note" name="note" type="number">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Remarque</mat-label>
+    <textarea matInput placeholder="Avez-vous une remarque?" [(ngModel)]="remarque" name="remarque"></textarea>
+  </mat-form-field>
+<div>
+  <button mat-stroked-button class="ajouterDevoir" [disabled]="((!this.nomAssignment) || (!this.dateDeRendu))">
+    Ajouter un devoir
+  </button>
+</div>
+
+
+</form>

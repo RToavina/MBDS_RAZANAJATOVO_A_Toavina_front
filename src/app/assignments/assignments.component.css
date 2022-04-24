@@ -1,0 +1,71 @@
+.rendu {
+  color:green;
+}
+
+.nonRendu {
+  color:red;
+  background-color: yellow;
+  border: 2px dashed orange;
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+}
+
+.ajouterBtn {
+  align-self: flex-end;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-column-id {
+  color:red;
+}
+
+.example-viewport {
+  height: 400px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+
+.example-item:hover {
+  background: beige;
+}
+
+.clickable:link
+{
+  text-decoration:none;
+}
+
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.auteur {
+  font-weight: bold ;
+}
+
+.barrePagination {
+  margin-bottom: 0.5em;
+}
+
+.title-container {
+  width: 800px; /* some amount that you set */
+}
+
+.assignmentTitle {
+  display: inline-block; /* so height and width actually take affect */
+  max-width: 80%;
+  height: 1em; /* so overflow hidden works and keeps text on one row */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
