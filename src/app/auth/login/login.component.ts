@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    if(! this.form.valid){
+      return;
+    }
     const val = this.form.value;
 
     if (val.email && val.password) {
