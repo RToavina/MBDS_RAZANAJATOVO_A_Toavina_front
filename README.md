@@ -34,7 +34,7 @@ ng serve
 - Boutons pour filtrer les assignments selon qu'ils ont été rendus ou pas encore rendus
 - Amélioration esthétique de la page
 - Hébergement sur Heroku :
-  - Back : https://api-mbds-razanajatovo.herokuapp.com/
+  - Back : https://api-mbds-razanajatovo.herokuapp.com/api/assignments
   - Front : https://app-mbds-razanajatovo.herokuapp.com/
 
 
